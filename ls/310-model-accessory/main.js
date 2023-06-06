@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
     scene.add(light);
 
-    const glasses = await loadGLTF('../../assets/models/mudai/scene.gltf');
+    const glasses = await loadGLTF('../../asset/models/mudai/scene.gltf');
     glasses.scene.scale.set(7,5,5);
     glasses.scene.position.set(0, -7, 0);
     glasses.scene.userData.clickable = true
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor.group.add(glasses.scene);
 
     //audio
-    const audio = await loadAudio('../../assets/sounds/musicband-background.mp3');
+    const audio = await loadAudio('../../asset/sounds/musicband-background.mp3');
 
     const listener = new THREE.AudioListener();
     camera.add(listener);
